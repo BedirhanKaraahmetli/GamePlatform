@@ -9,67 +9,8 @@ namespace GamePlatform
     {
         static void Main(string[] args)
         {
-            //Gamer gamer1 = new Gamer
-            //{
-            //    Id = 1,
-            //    FirstName = "Bedirhan",
-            //    LastName = "Karaahmetli",
-            //    NationalityId = "12345678910",
-            //    YearOfBirth = 1982
-            //};
-            //Gamer gamer2 = new Gamer
-            //{
-            //    Id = 2,
-            //    FirstName = "Serkan",
-            //    LastName = "Karaahmetli",
-            //    NationalityId = "10987654321",
-            //    YearOfBirth = 1983
-            //};
-            //Gamer gamer3 = new Gamer
-            //{
-            //    Id = 3,
-            //    FirstName = "Johnny",
-            //    LastName = "Cash",
-            //    NationalityId = "18293745645",
-            //    YearOfBirth = 1932
-            //};
-
-            //Game game1 = new Game
-            //{
-            //    GameName = "Cyberpunk 2077",
-            //    GameType = "RPG",
-            //    GamePrice = 439
-            //};
-
-            //Game game2 = new Game
-            //{
-            //    GameName = "Death Stranding",
-            //    GameType = "Action",
-            //    GamePrice = 299
-            //};
-
-            //Game game3 = new Game
-            //{
-            //    GameName = "Pro Evolution Soccer 2021",
-            //    GameType = "Simulation/Sports",
-            //    GamePrice = 329
-            //};
-
             GamerManager gamerManager = new GamerManager();
-            //gamerManager.Add(gamer1);
-            //gamerManager.Add(gamer2);
-            //gamerManager.Add(gamer3);
-            //gamerManager.Update(gamer2);
-            //gamerManager.Delete(gamer1);
-
             GameManager gameManager = new GameManager();
-            //games.Add(game1);
-            //games.Add(game2);
-            //games.Add(game3);
-            //games.Update(game2);
-            //games.Delete(game3);
-            
-
             while (true)
             {
                 Console.WriteLine("*******************MENU*******************");
@@ -102,10 +43,12 @@ namespace GamePlatform
                     gamerManager.Delete(Convert.ToInt32(Console.ReadLine()));
                     Console.Clear();
                 }
+
                 else if (choice == 3)
                 {
                     gamerManager.List();
                 } 
+
                 else if (choice == 4)
                 {
                     Console.WriteLine("Enter the information of the game you want to add : ");
@@ -118,6 +61,7 @@ namespace GamePlatform
                     gameManager.Add(new Game() { GameName = GameName, GameType = GameType, GamePrice = GamePrice });
                     Console.Clear();
                 }
+
                 else if (choice == 5)
                 {
                     gameManager.List();
@@ -125,10 +69,12 @@ namespace GamePlatform
                     gameManager.Delete(Console.ReadLine());
                     Console.Clear();
                 }
+
                 else if (choice == 6)
                 {
                     gameManager.List();
                 }
+
                 else if (choice == 7)
                 {
                     while (true)
@@ -153,6 +99,7 @@ namespace GamePlatform
                             gameManager.Delete(namegame);
                             break;
                         }
+
                         else if (choice2 == 2)
                         {
                             gameManager.List();
@@ -168,6 +115,7 @@ namespace GamePlatform
                             gameManager.Delete(namegame);
                             break;
                         }
+
                         else
                         {
                             break;
@@ -175,6 +123,7 @@ namespace GamePlatform
                     }
 
                 }
+
                 else
                 {
                     break;

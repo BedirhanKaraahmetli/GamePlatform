@@ -28,6 +28,7 @@ namespace GamePlatform
                     Console.WriteLine(gamer.FirstName + " " + gamer.LastName + " has been deleted from the system." + "\n ");
                     break;
                 }
+
                 else
                 {
                     continue;

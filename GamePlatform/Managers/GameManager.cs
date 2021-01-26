@@ -26,6 +26,7 @@ namespace GamePlatform.Managers
                     games.Remove(game);
                     break;
                 }
+
                 else
                 {
                     continue;
